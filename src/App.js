@@ -55,8 +55,16 @@ class App extends Component {
     let { volume } = this.state
 
     if(this.state.encoded){
-      morsify.audio(this.state.encoded).play();
+      var audio = morsify.audio(this.state.encoded);
+      audio.play();
+      setTimeout(
+        function(){
+          return audio.stop();
+        }, 6000
+      );
     }
+
+
 
 
     return (

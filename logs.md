@@ -65,6 +65,14 @@ More specifically, I'm highly interested by investigating:
 * The intersections between digital and analog in the context of internet and data transmission
 
 1. How is data carried from Hardwares to Softwares, from analog to digital apparatuses?
-2. What is data? How does these apparatuses contribute to shift our definition of data?
+2. What is data? How does these apparatuses are shifting our understanding of data?
 
-### morse_guessing_game : WHY? ###
+### morse_guessing_game: WHY ###
+
+Through this game, my aim is to reflect on:
+1. How does technology (morse) brings new affordances/restrictions for data transmission?
+2. How does morse perform with/upon natural language?
+
+- - - -
+
+After commit [3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257](https://github.com/cyruslk/morse_guessing_game/commit/3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257): shortly after this main functionality of transferring the user's data to audio, I realized that there is an important dimension that need to be investigated now: time. For now, I'm thinking of looping the audio and using 1) a fixed ammount of time or 2) an ammount defined by player A to output the signal to player B.
