@@ -55,7 +55,20 @@ class App extends Component {
     let { volume } = this.state
 
     if(this.state.encoded){
-      var audio = morsify.audio(this.state.encoded);
+      var audio = morsify.audio(this.state.encoded, {
+         unit: 0.1,
+         oscillator: {
+          type: 'sine',
+          frequency: 500,
+          onended: () => {
+            console.log("clear the state here");
+            this.setState({
+              value: "",
+              encoded: ""
+            })
+          }
+        }
+      });
       audio.play();
       setTimeout(
         function(){
