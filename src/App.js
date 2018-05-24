@@ -59,7 +59,7 @@ class App extends Component {
         {this.state.volume}
       <Slider
         className="slider"
-        step={10}
+        step={20}
         tooltip={false}
         value={volume}
         orientation="vertical"
@@ -73,7 +73,7 @@ class App extends Component {
        </label>
        <input type="submit" value="Submit" />
      </form>
-     ----> {this.state.encoded}
+     {this.state.encoded}
 
       </div>
     );
