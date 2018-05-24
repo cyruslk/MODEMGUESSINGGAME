@@ -3,15 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom';
 import Slider from 'react-rangeslider';
+import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 var morsify = require('morsify');
-
-const pump = require('pump');
-const CharStream = require('morsea/char-stream');
-const TextEncoder = require('morsea/text-encoder');
-const AudioEncoder = require('morsea/audio-encoder');
-
-const audioEncoder = AudioEncoder.create();
-
 
 
 class App extends Component {
@@ -82,6 +75,16 @@ class App extends Component {
 
     return (
       <div className="App">
+
+      <CheckboxGroup value={['sine']} onChange={this.fruitsChanged}>
+        <Checkbox value="sine"/> sine
+        <Checkbox value="square"/> square
+        <Checkbox value="sawtooth"/> sawtooth
+        <Checkbox value="triangle"/> triangle
+
+      </CheckboxGroup>
+
+
         {this.state.volume}
       <Slider
         className="slider"

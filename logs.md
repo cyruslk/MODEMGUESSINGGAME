@@ -76,3 +76,9 @@ Through this game, my aim is to reflect on:
 - - - -
 
 After commit [3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257](https://github.com/cyruslk/morse_guessing_game/commit/3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257): shortly after this main functionality of transferring the user's data to audio, I realized that there is an important dimension that need to be investigated now: time. For now, I'm thinking of looping the audio and using 1) a fixed ammount of time or 2) an ammount defined by player A to output the signal to player B.
+
+After commit [10633ff6fc27e069f1e543c9397d768e43ef062b](https://github.com/cyruslk/morse_guessing_game/commit/10633ff6fc27e069f1e543c9397d768e43ef062b): once a first draft of handling time has been done, it's now the time to introduce the morse's affordances/restrictions -> the core elements of the game. Drawing on [morsify](https://github.com/ozdemirburak/morsify), a variety of parameters could be used:
+
+* The Unit Period: the speed of transmission, in words per minute
+* The oscillator's type: sine, square, sawtooth, triangle
+* The value (in hertz) of the frequencies  
