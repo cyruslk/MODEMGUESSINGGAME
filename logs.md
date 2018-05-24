@@ -82,3 +82,13 @@ After commit [10633ff6fc27e069f1e543c9397d768e43ef062b](https://github.com/cyrus
 * The Unit Period: the speed of transmission, in words per minute
 * The oscillator's type: sine, square, sawtooth, triangle
 * The value (in hertz) of the frequencies  
+
+## 2018-05-24
+
+What need to be done:
+
+* Write "the rules" of the game.
+* Is this a two-player game? Is this a X-player game?
+* program the routes for /index /player-a /player-b
+* Research on the min/max. of the slidebar values (= min/max. frequencies of morse?).
+* Following Stephen C. Phillips' [morse listener](https://github.com/scp93ch/morse-pro/blob/master/src/morse-pro-listener.js), start working on the functionalities of /player-b
