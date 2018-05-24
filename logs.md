@@ -64,4 +64,7 @@ More specifically, I'm highly interested by investigating:
 
 * The intersections between digital and analog in the context of internet and data transmission
 
-### morse_guessing_game : WHY? ### 
+1. How is data carried from Hardwares to Softwares, from analog to digital apparatuses?
+2. What is data? How does these apparatuses contribute to shift our definition of data?
+
+### morse_guessing_game : WHY? ###

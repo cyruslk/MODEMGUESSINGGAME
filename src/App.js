@@ -20,7 +20,6 @@ class App extends Component {
    this.state = {
      volume: 0,
      value: "",
-     encoded : ""
    }
 
    this.handleChange = this.handleChange.bind(this);
@@ -52,7 +51,13 @@ class App extends Component {
     console.log(this.state.volume);
     console.log(this.state.value);
 
+
     let { volume } = this.state
+
+    if(this.state.encoded){
+      morsify.audio(this.state.encoded).play();
+    }
+
 
     return (
       <div className="App">
