@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom';
+import Emitter from './Emitter';
+import Receiver from './Receiver';
+
+
 import Slider from 'react-rangeslider';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 var morsify = require('morsify');
@@ -11,101 +15,65 @@ class App extends Component {
   constructor(props, context) {
    super(props, context)
    this.state = {
-     volume: 0,
-     value: "",
+     emitter: false,
+     receiver: false
    }
+   this.handleClickEmitter = this.handleClickEmitter.bind(this);
+   this.handleClickReceiver = this.handleClickReceiver.bind(this);
 
-   this.handleChange = this.handleChange.bind(this);
-   this.handleSubmit = this.handleSubmit.bind(this);
- }
+}
 
- handleOnChange = (value) => {
-   this.setState({
-     volume: value
-   })
- }
+handleClickEmitter() {
+  this.setState(prevState => ({
+    emitter:  true,
+    receiver: false
+  }));
+}
 
- handleChange(event) {
-   this.setState({value: event.target.value});
- }
-
- handleSubmit(event) {
-
-   var encoded = morsify.encode(this.state.value);
-
-   console.log(encoded);
-   event.preventDefault();
-   this.setState({
-     encoded
-   })
- }
+handleClickReceiver() {
+  this.setState(prevState => ({
+    emitter: false,
+    receiver: true
+  }));
+}
 
   render() {
-    console.log(this.state.volume);
-    console.log(this.state.value);
-
-
-    let { volume } = this.state
-
-    if(this.state.encoded){
-      var audio = morsify.audio(this.state.encoded, {
-         unit: 0.1,
-         oscillator: {
-          type: 'sine',
-          frequency: 500,
-          onended: () => {
-            console.log("clear the state here");
-            this.setState({
-              value: "",
-              encoded: ""
-            })
-          }
-        }
-      });
-      audio.play();
-      setTimeout(
-        function(){
-          return audio.stop();
-        }, 6000
+    if(this.state.emitter){
+      return (
+        <div className="App">
+        <button onClick={this.handleClickEmitter}>
+          emitter
+        </button>
+        <button onClick={this.handleClickReceiver}>
+          receiver
+        </button>
+          <Emitter />
+        </div>
+      );
+    }if(this.state.receiver){
+      return (
+        <div className="App">
+        <button onClick={this.handleClickEmitter}>
+          emitter
+        </button>
+        <button onClick={this.handleClickReceiver}>
+          receiver
+        </button>
+          <Receiver />
+        </div>
+      );
+    }else{
+      return (
+        <div className="App">
+        <button onClick={this.handleClickEmitter}>
+          emitter
+        </button>
+        <button onClick={this.handleClickReceiver}>
+          receiver
+        </button>
+        </div>
       );
     }
-
-
-
-
-    return (
-      <div className="App">
-
-      <CheckboxGroup value={['sine']} onChange={this.fruitsChanged}>
-        <Checkbox value="sine"/> sine
-        <Checkbox value="square"/> square
-        <Checkbox value="sawtooth"/> sawtooth
-        <Checkbox value="triangle"/> triangle
-
-      </CheckboxGroup>
-
-
-        {this.state.volume}
-      <Slider
-        className="slider"
-        step={20}
-        tooltip={false}
-        value={volume}
-        orientation="vertical"
-        onChange={this.handleOnChange}
-      />
-
-      <form onSubmit={this.handleSubmit}>
-       <label>
-         Name:
-         <input type="text" value={this.state.value} onChange={this.handleChange} />
-       </label>
-       <input type="submit" value="Submit" />
-     </form>
-     {this.state.encoded}
-
-      </div>
-    );
   }
 }
 
