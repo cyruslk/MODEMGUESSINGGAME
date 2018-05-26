@@ -78,14 +78,6 @@ class Receiver extends Component {
 
       Receiver component
 
-      <CheckboxGroup value={['sine']} onChange={this.fruitsChanged}>
-        <Checkbox value="sine"/> sine
-        <Checkbox value="square"/> square
-        <Checkbox value="sawtooth"/> sawtooth
-        <Checkbox value="triangle"/> triangle
-
-      </CheckboxGroup>
-
 
         {this.state.volume}
       <Slider

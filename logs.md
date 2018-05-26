@@ -99,15 +99,17 @@ What need to be done:
 Instead of creating two routes I could use socket-io to keep all the components in the page but "frieze" them depending on who starts emitting + receiving. (This will require a backend). Here's the logic ( Using [ReactJS](https://reactjs.org/) and [NodeJs](https://nodejs.org/en/))
 
 /player-a
+
 0. How to handle the settings? Player-a or randomly chosen? (...to be continued)
 1. When the Field is : [OnFocus](https://reactjs.org/docs/events.html): lock the morse settings' components (checkBoxes, slider)
 2. With a onSubmit method --> [socket.broadcast.emit](https://socket.io/docs/emit-cheatsheet/) to all the other clients with the morse settings.
 
 /players-b
+
 3. Receivig the message with [socket.on](https://socket.io/docs/), I will use a callback to "frieze" the(ir) field component
 4. The microphone will then trigger and I will start to output the stuff received.
 5. How to handle the end of the game? (...to be continued)
 
 
 - - - -
-For now I'll probably just keep the slider -> remove the checkboxes. Before building the logic of the game, i'll make sure the receiver piece of code works fine. ~~I'll make a /test route for this.~~ I'll just to two components.
+For now I'll probably just keep the slider -> remove the checkboxes. Before building the logic of the game, i'll make sure the receiver piece of code works fine. ~~I'll make a /test route for this.~~ I'll just make two components.

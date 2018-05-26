@@ -76,15 +76,6 @@ class Emitter extends Component {
     return (
       <div className="Emitter">
 
-      <CheckboxGroup value={['sine']} onChange={this.fruitsChanged}>
-        <Checkbox value="sine"/> sine
-        <Checkbox value="square"/> square
-        <Checkbox value="sawtooth"/> sawtooth
-        <Checkbox value="triangle"/> triangle
-
-      </CheckboxGroup>
-
-
         {this.state.volume}
       <Slider
         className="slider"
