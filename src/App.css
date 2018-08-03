@@ -14,12 +14,20 @@
   color: white;
 }
 
+.checkboxes{
+  display: none;
+}
+
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+.Receiver .form{
+  display: none;
 }
 
 @keyframes App-logo-spin {

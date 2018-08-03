@@ -76,7 +76,13 @@ class Receiver extends Component {
     return (
       <div className="Receiver">
 
-      Receiver component
+      <CheckboxGroup className="checkboxes" value={['sine']}>
+        <Checkbox value="sine"/> sine
+        <Checkbox value="square"/> square
+        <Checkbox value="sawtooth"/> sawtooth
+        <Checkbox value="triangle"/> triangle
+
+      </CheckboxGroup>
 
 
         {this.state.volume}
@@ -89,7 +95,7 @@ class Receiver extends Component {
         onChange={this.handleOnChange}
       />
 
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="form">
        <label>
          Name:
          <input type="text" value={this.state.value} onChange={this.handleChange} />

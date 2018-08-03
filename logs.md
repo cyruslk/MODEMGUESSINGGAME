@@ -2,97 +2,97 @@
 
 This is the first draft of the morse game -- an idea I came accoss recently. I call it the morse game for now but the name of this will probaly change soon. Basically, this takes the form on an online game -- played by two players behind their computers. The idea is rather simple: player A need to send a message to player B using the morse protocol. Player A types a message that gets sonified to morse (or maybe modem?) and player B decrypt the morse message. However, this is when the whole thing becomes exciting: in order to correctly decrypt the message sonified by player A, B's morse decrypter need to be based on the same settings as A's one.
 
-### Here's a collection of broad links to introduce you to the morse protocol: ###
+### Here's a collection of broad links to introduce you to the morse protocol:
 
-* https://en.wikipedia.org/wiki/Morse_code
-* https://www.youtube.com/watch?v=kDeVR6sWFZ4
-* https://starling.us/free/morse/
-* https://www.dxzone.com/catalog/Operating_Modes/Morse_code/
+- https://en.wikipedia.org/wiki/Morse_code
+- https://www.youtube.com/watch?v=kDeVR6sWFZ4
+- https://starling.us/free/morse/
+- https://www.dxzone.com/catalog/Operating_Modes/Morse_code/
 
-### Now, here's an ongoing collection of games playing with morse/other interesting analog signal protocols###
+### Now, here's an ongoing collection of games playing with morse/other interesting analog signal protocols
 
-* http://www.searchamateur.com/Play-Free-Online-Games/Morse-Code-Machine.htm
-* http://www.searchamateur.com/Radio-Amateur/Radio-Amateur-Software.htm (!!)
+- http://www.searchamateur.com/Play-Free-Online-Games/Morse-Code-Machine.htm
+- http://www.searchamateur.com/Radio-Amateur/Radio-Amateur-Software.htm (!!)
 
-### Now, here's an ongoing collection of stuffs I could use for inplementing this idea###
+### Now, here's an ongoing collection of stuffs I could use for inplementing this idea
 
-* http://md5decrypt.net/Api/
-* https://github.com/ozdemirburak/morsify
-* https://morsecode.scphillips.com/labs/decoder/ (this has an API to decode from morse to text)
-* https://gist.github.com/myme/7554709
-* https://ubuntuforums.org/showthread.php?t=2211655
-* https://stackoverflow.com/questions/43012715/morse-audio-decoding-using-python
+- http://md5decrypt.net/Api/
+- https://github.com/ozdemirburak/morsify
+- https://morsecode.scphillips.com/labs/decoder/ (this has an API to decode from morse to text)
+- https://gist.github.com/myme/7554709
+- https://ubuntuforums.org/showthread.php?t=2211655
+- https://stackoverflow.com/questions/43012715/morse-audio-decoding-using-python
 
 For now, I'm thinking of using a button to trigger the signal. However, another option could be to trigger a signal every time a letter will be inputted to the form. This last idea will probably make the game more "playable". Also -- this makes me think that the time is an important asset of the game (...to be developed).
 
-- - - -
+------
 
 For now I'm using the morsify JavaScript package. I'm just investigating if there's a way to transfert back the morse signals to text. I may shift to this package (https://github.com/scp93ch/morse-pro) which has more audio capabilities. Or I'll probably use morsify to produce the text > morse and https://github.com/scp93ch/morse-pro/blob/master/src/morse-pro-listener.js to open the microphone and converts back the morse to text.
 
-- - - -
+------
 
 The central question that I still didn't addressed is: WHY? What does the game reflect on? What am I trying to investigate through this game?
 
-
 Two years ago, I enrolled myself in an intensive programming bootcamp. By doing so, my goals were to explore the affordances of source code and approach its intersections with politics x art x design (and so on). Later on I came accross the all [Software Studies](http://dm.ncl.ac.uk/courseblog/files/2010/02/softwarestudies.pdf) research and the [critical engineering](https://criticalengineering.org/)'s manifesto -- and more recently Carl DiSalvo's [Adversarial Design](https://mitpress.mit.edu/books/adversarial-design).
 
-- - - -
+------
+
 From DiSalvo's book:
 
-### "Agonism in Theory and Design" ###
+### "Agonism in Theory and Design"
 
 "Agonism is a condition of disagreement and confrontation—a condition of contestation and dissensus. Those who espouse an agonistic approach to democracy encourage contestation and dissensus as fundamental to democracy." (DiSalvo, 2015)
 
-### Politics vs Political ###
+### Politics vs Political
 
 "Politics are a series of structures and mechanisms that enable governing. (...) Different from these means, the political is a condition of life — a condition of ongoing contest between forces or ideals." (DiSalvo, 2015)
 
-### "Doing the Work of Agonism" ###
+### "Doing the Work of Agonism"
 
 "To claim that adversarial design does the work of agonism means that designed objects can function to prompt recognition of political issues and relations, express dissensus, and enable contestational claims and arguments." (DiSalvo, 2015)
 
-- - - -
+------
 
 My work (even if it's not exclusively MY work since it's enacted by the restrictions/affordances of a [variety of agents](https://www.youtube.com/watch?v=imMthTQLo_Y&t=4s) is drawing on this theoritical frame. It aims to question through engineering and design dominent ideologies and question using *Agonism* how technologiy unfolds itself in our sociopolitical ecosystems.
 
 More specifically, I'm highly interested by investigating:
 
-* The intersections between natural language and source code
+- The intersections between natural language and source code
 
 1. How does source code carries/alters/enact natural language (and vice versa)?
 2. Narrowing down the scope to our information ecosystem: how does the affordances/restrictions of platforms and their underlying source code bring forward new models of interactions and politics?
 
-* The intersections between digital and analog in the context of internet and data transmission
+- The intersections between digital and analog in the context of internet and data transmission
 
 1. How is data carried from Hardwares to Softwares, from analog to digital apparatuses?
 2. What is data? How does these apparatuses are shifting our understanding of data?
 
-### morse_guessing_game: WHY ###
+### morse_guessing_game: WHY
 
 Through this game, my aim is to reflect on:
+
 1. How does technology (morse) brings new affordances/restrictions for data transmission?
 2. How does morse perform with/upon natural language?
 
-- - - -
+------
 
 After commit [3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257](https://github.com/cyruslk/morse_guessing_game/commit/3b0819ee9b8a6e6a0323dc9e2607f328b8fdb257): shortly after this main functionality of transferring the user's data to audio, I realized that there is an important dimension that need to be investigated now: time. For now, I'm thinking of looping the audio and using 1) a fixed ammount of time or 2) an ammount defined by player A to output the signal to player B.
 
 After commit [10633ff6fc27e069f1e543c9397d768e43ef062b](https://github.com/cyruslk/morse_guessing_game/commit/10633ff6fc27e069f1e543c9397d768e43ef062b): once a first draft of handling time has been done, it's now the time to introduce the morse's affordances/restrictions -> the core elements of the game. Drawing on [morsify](https://github.com/ozdemirburak/morsify), a variety of parameters could be used:
 
-* The Unit Period: the speed of transmission, in words per minute
-* The oscillator's type: sine, square, sawtooth, triangle
-* The value (in hertz) of the frequencies  
+- The Unit Period: the speed of transmission, in words per minute
+- The oscillator's type: sine, square, sawtooth, triangle
+- The value (in hertz) of the frequencies  
 
 ## 2018-05-24
 
 What need to be done:
 
-* Write "the rules" of the game.
-* Is this a two-player game? Is this a X-player game?
-* program the routes for /index /player-a /player-b
-* Research on the min/max. of the slidebar values (= min/max. frequencies of morse?).
-* Following Stephen C. Phillips' [morse listener](https://github.com/scp93ch/morse-pro/blob/master/src/morse-pro-listener.js), start working on the functionalities of /player-b
-
+- Write "the rules" of the game.
+- Is this a two-player game? Is this a X-player game?
+- program the routes for /index /player-a /player-b
+- Research on the min/max. of the slidebar values (= min/max. frequencies of morse?).
+- Following Stephen C. Phillips' [morse listener](https://github.com/scp93ch/morse-pro/blob/master/src/morse-pro-listener.js), start working on the functionalities of /player-b
 
 ## 2018-05-26
 
@@ -100,16 +100,44 @@ Instead of creating two routes I could use socket-io to keep all the components 
 
 /player-a
 
-0. How to handle the settings? Player-a or randomly chosen? (...to be continued)
-1. When the Field is : [OnFocus](https://reactjs.org/docs/events.html): lock the morse settings' components (checkBoxes, slider)
-2. With a onSubmit method --> [socket.broadcast.emit](https://socket.io/docs/emit-cheatsheet/) to all the other clients with the morse settings.
+1. How to handle the settings? Player-a or randomly chosen? (...to be continued)
+2. When the Field is : [OnFocus](https://reactjs.org/docs/events.html): lock the morse settings' components (checkBoxes, slider)
+3. With a onSubmit method --> [socket.broadcast.emit](https://socket.io/docs/emit-cheatsheet/) to all the other clients with the morse settings.
 
 /players-b
 
-3. Receivig the message with [socket.on](https://socket.io/docs/), I will use a callback to "frieze" the(ir) field component
-4. The microphone will then trigger and I will start to output the stuff received.
-5. How to handle the end of the game? (...to be continued)
+1. Receivig the message with [socket.on](https://socket.io/docs/), I will use a callback to "frieze" the(ir) field component
+2. The microphone will then trigger and I will start to output the stuff received.
+3. How to handle the end of the game? (...to be continued)
 
+------
 
-- - - -
 For now I'll probably just keep the slider -> remove the checkboxes. Before building the logic of the game, i'll make sure the receiver piece of code works fine. ~~I'll make a /test route for this.~~ I'll just make two components.
+
+## 2018-06-06
+
+First, I'll remove the input form on the receiver component. This helps me to go further into the logic of the game and it's visual components. By removing as much as possible from the interface, the idea is to actually create a tension btw a loud/strident morse (or modem) sound and a very "lisse" and minimal set of visual components.
+
+I'm also removing the checkboxes from the receiver component. For the emitter's one, I need to figure out what to do with the slider.
+
+## 2018-08-01
+
+I'm now reading Protocol by Allexander Galloway - and this read really helped me to clarify my researches. It happens more clearly to me now that what I'm investigating is the political agency of (computational) protocols. In other words, what is the role of technological protocols and how do they interact with our socio/political spheres.
+
+Overall, I'm not specifically addressing the case of Fake News but a more precise research - in which the Fake News is contained: the performativity of Protocols.
+
+Protocols could be linked to Giorgio Agamben's idea of the Apparatus, as an object that has the capacity to control, direct, alter, (...) the behaviors.
+
+Galloway defines then protocol as ->
+
+
+Protocols could then be:
+
+- grgrgr
+- grtgrtr
+
+This leads me to readdress the central question of my motivations throught  this project and by extension to these researches involving Modem and Language.
+
+WHY? Through the use of Modems, my goal is to explore the tension between silent interfaces and their hidden structure; and reveal the protocol.
+
+Investigate the protocol through agonism design to (....)
