@@ -209,4 +209,16 @@ Through the investigation of protocols **through** Modems , one of my goals is t
 
 Moreover, what really strikes me using the Internet is its *silent* characteristic. Internet appears to me as a silent - and smooth - space; defined by what Galloway states as a *continuity*.
 
-By placing intentionally a **noisy** protocol at the center of the game and creating a condition when - for the players to communicate - the protocol needs to work *well*  (perform well following its specific standards), **my goals are thus to make the protocol visible; and question these silent interfaces
+By placing intentionally a **noisy** protocol at the center of the game and creating a condition when - for the players to communicate - the protocol needs to work *well*  (perform well following its specific standards), **my goals are thus to make the protocol visible; and question these silent interfaces.**
+
+## 2018-08-04
+
+Instead of working with Morse, I'll now work with Modem. Same logic:
+
+- The Modem is at the center of the Game/Interaction.
+- The goal of the game is basically to cooperate with the Protocol.
+
+What I do like with this simple idea is that:
+
+- The interaction is both analog and digital
+- Therefore, the interaction is at the opposite or this silent *continuity* of the web. The interaction is noisy - the interaction is slow.
