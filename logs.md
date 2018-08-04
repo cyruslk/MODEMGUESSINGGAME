@@ -222,3 +222,5 @@ What I do like with this simple idea is that:
 
 - The interaction is both analog and digital
 - Therefore, the interaction is at the opposite or this silent *continuity* of the web. The interaction is noisy - the interaction is slow.
+
+**Consequently, I'll now rename the repo MODEMGUESSINGGAME**
