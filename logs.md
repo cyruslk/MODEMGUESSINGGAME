@@ -122,30 +122,30 @@ I'm also removing the checkboxes from the receiver component. For the emitter's 
 
 ## 2018-08-01/02/03
 
-I'm now reading [Protocol: How Control Exists after Decentralization](https://mitpress.mit.edu/books/protocol) by Alexander Galloway. This really helped me to my researches spawning Modem and Language.
+I'm now reading [Protocol: How Control Exists after Decentralization](https://mitpress.mit.edu/books/protocol) by Alexander Galloway. This really helped me to structure my researches spawning Modem and Language.
 
-Alexander's Galloway's Protocol is directly rooted in Deuleuze' researches on the [*societies of control*](*societies of control*) and on the rhizome; using them to investigate the political and technical structure of the internet.
+Alexander's Galloway's Protocol is directly rooted in Deuleuze's researches on a) the [*societies of control*](*societies of control*) and b) the rhizome; using them to investigate the political and technical structure of the internet.
 
 ### A Society of Control
 
 Following Deleuze: "It’s easy to set up a correspondence between any society and some kind of machine . . . The old sovereign societies worked with simple machines, levers, pulleys, clocks; but recent disciplinary societies were equipped with thermodynamic machines. . . ; control societies function with a third generation of machines,with information technology and computers.” (Deleuze, [Negotiations](https://cdn.preterhuman.net/texts/thought_and_writing/philosophy/Deleuze/Deleuze%20-%20Negotiations.pdf), p. 180.)
 
-In other words, from XVIIIth-Century to XIXth and XXth-Century, the manifestation of Power evolved respectively from a Centralized Network to a Decentralized and a **distributed/rhizomic** one - where belongs Internet and modern-computing processes.
+In other words, from XVIIIth-Century to XIXth and XXth-Century, the manifestation of Power respectively evolved from a Centralized Network to a Decentralized and a **distributed/rhizomic** one - where Internet belongs (and other modern-computing apparatuses).
 
-In a distributed network like Internet where there is no *chain of command*, the **node** acts as an **autonomous agent**. Following Deleuze and Guattari in [A Thousand Plateaus](http://www.kareneliot.de/downloads/Deleuze%20Guattari%20A%20Thousand%20Plateaus.pdf) (p.12,15, 21), the distributed network is then:
+In a distributed network like Internet where there is no *chain of command*, **nodes** acts as an **autonomous agents**. Following Deleuze and Guattari in [A Thousand Plateaus](http://www.kareneliot.de/downloads/Deleuze%20Guattari%20A%20Thousand%20Plateaus.pdf) (p.12,15, 21), the distributed network thus works as follow:
 
 - Connecting any node to any other node.
 - Not composed by units, but by directions in motions.
-- Can't be defined by a specific structure.
-- a short-term memory model.
-- operates by variation, expansion, conquest, capture, offshoot
+- Not defined by a specific structure.
+- Characterized by a short-term memory model.
+- operating by variation, expansion, conquest, capture, offshoot
 - acentered, nonheriarchical, nonsignifying - and without an organizing memory or central automation.
 
 ### Nodes are Protocols; Protocols are Nodes
 
-For Galloway, internet is then a distributed network composed by a variety of **autonomous** nodes (in other terms: **Protocols**). Internet is thus a set of "technical procedures for defining,managing, modulating, and distributing information throughout a flexible yet robust delivery infrastructure." (Thacker: Foreword: XV)
+For Galloway, internet is then a distributed network composed by a variety of **autonomous** nodes (in other terms: **Protocols**). Internet appears as a set of "technical procedures for defining, managing, modulating, and distributing information throughout a flexible yet robust delivery infrastructure." (Thacker: Foreword: XV)
 
-Galloway defines the Protocol as:
+Galloway defines a Protocol as:
 
 -  a system of recommendations, regulations and rules that outline specific technical *standards*. (p.6)
 -  an anti-hierarchy and anti-authority system of distributed management; facilitating peer-to-peer relationships between **autonomous entities** and engendering localized decision making. (p.82)
@@ -158,7 +158,7 @@ Consequently:
 - "Protocol outlines the playing field for what can happen, and where. If one chooses to ignore a certain protocol, then it becomes impossible to communicate on that particular channel. No protocol, no connection." (p.167)
 - "The concept of Protocol is as concerned with disconnection as it is with connectivity. The moment of disconnectivity is the moment when protocol most forcefully displays its political character. " (Foreword: XVI)
 
-More concretely, (Computational) Protocols could take the form of:
+(Computational) Protocols could as a result take the form of:
 
 - Code
 - Networked Communication *Layers*, such as the ones of the [Open Systems Interconnection model (OSI model)](https://en.wikipedia.org/wiki/OSI_model) standardized by the [International Organization for Standardization (ISO)](https://www.iso.org/home.html).
@@ -167,13 +167,13 @@ More concretely, (Computational) Protocols could take the form of:
 
 ### GOING BACK TO MODEMS
 
-From 2XTWEETSXMODEMSXTEXTXTWEET to this project, there is a constant in my researches: investigating Modems, Code and [Natural Language](https://en.wikipedia.org/wiki/Natural_language).
+From 2XTWEETSXMODEMSXTEXTXTWEET to this project, there is a constant in my researches: investigating the interactions betwen Modems - and consequently: Transmitting Protocols, Code and [Natural Language](https://en.wikipedia.org/wiki/Natural_language).
 
-### What is a Modem?
+### Now: What is a Modem?
 
-Taken from Wikipedia, a A "**modem** (**mo**dulator–**dem**odulator) is a [network hardware](https://en.wikipedia.org/wiki/Network_hardware) device that [modulates](https://en.wikipedia.org/wiki/Modulation#Digital_modulation_methods) one or more [carrier wave](https://en.wikipedia.org/wiki/Carrier_wave) signals to encode [digital information](https://en.wikipedia.org/wiki/Digital_information) for transmission and [demodulates](https://en.wikipedia.org/wiki/Demodulation) signals to decode the transmitted information."
+Taken from [Wikipedia](https://en.wikipedia.org/wiki/Modem), a A "**modem** (**mo**dulator–**dem**odulator) is a [network hardware](https://en.wikipedia.org/wiki/Network_hardware) device that [modulates](https://en.wikipedia.org/wiki/Modulation#Digital_modulation_methods) one or more [carrier wave](https://en.wikipedia.org/wiki/Carrier_wave) signals to encode [digital information](https://en.wikipedia.org/wiki/Digital_information) for transmission and [demodulates](https://en.wikipedia.org/wiki/Demodulation) signals to decode the transmitted information."
 
-A Modem is thus a concrete (and very signifiant ) Protocol of the Internet. Directly belonging to the **Physical Layer ** (the #1 layer of the OSI Model), a Modem is a perfect **node** : performing specific standarts in order to establish a connection with others.
+A Modem is thus a concrete (and very signifiant ) Protocol of the Internet. Belonging to the **Physical Layer ** (the #1 layer of the OSI Model), a Modem is a perfect **node** : performing specific standarts in order to establish a connection with others.
 
 ### Why code?/ What is code?
 
@@ -184,43 +184,45 @@ Code is language. Code is a Protocol, also defined by by specific *standarts*, r
 More specifically, code is **performative**.
 
 - "Code is the only language that is executable." (p. 165)
-- Following Kittler's perspective, instead of ordinary/natural language where there is no word "which does what it says" (p. 165),  code is a machine "for converting meaning into action" (p. 166)
-- Code has a semantic meaning,  but it also has an enactment of meaning. Code has both a legible state and an executable state.
+- Following Kittler, instead of ordinary/natural language where there is no word "which does what it says" (p. 165),  code is a machine "for converting meaning into action" (p. 166)
+- Code has a semantic meaning, but it also has an enactment of meaning. Code has both a legible state and an executable state.
 
 ### Natural Language?
 
-Galloway states that in the *control society*/information age we're living in, "matter itself is understood in terms of information or code." (p. 111)
+Galloway states that in the *control society*/information age we're living in, "matter itself is understood in terms of information or code." (p. 111) - the best example is the rise of [biometrics](https://en.wikipedia.org/wiki/Biometrics).
 
-Consequently, code (and by extension, a Protocol) becomes an executable "metalayer that encapsulates Natural language". (p. 166)
+Consequently, code (and by extension, Protocols) becomes executable "metalayers that encapsulates Natural language". (p. 166)
+
 
 ### NARROWING DOWN MY PROBLEMATICS
 
-My interest could then by characterized by a set of  investigations regarding the **performativity of Protocols.**
+My aim is consequently to investigate through design and engineering and inside a research/creation approach the **performativity of Protocols.**
 
-In other words, I aim to ask: **How do Protocols play the role of  Apparatuses interacting with Natural Language inside our online information ecosystem.**
+In other words, I aim to ask: **How do Protocols play the role of [Apparatuses](https://soundenvironments.files.wordpress.com/2011/11/agamben-what-is-and-apparatus.pdf) interacting/altering/performing/processing/desiging (with) Natural Language inside our online information ecosystem.**
 
 In other words: **how do Protocols perform (with/upon) Natural Language?**
 
+My definition of the Apparatus is directly driven by Giorgio Agamben: as a mechanism that has “the capacity to capture, orient, determine (...) the gestures, behaviors, opinions, or discourses of living beings.”(Agamben, 2009).
+
 ### GOING BACK TO MODEMS: WHY?
 
-As I said earlier, Modems are in my opinion very interesting of Protocols to investigate and hack - due amongst other characteristics to their *sonic agency*, their *archaic* association/connotation and their *primitive* modus operandi of transmitting data (loud and screeching sounds, analog process...).
+As I said earlier, Modems are in my opinion very interesting kinds of Protocols to investigate and hack - due amongst other characteristics to a) their *sonic agency*, b) their *archaic* association and c) their *primitive* modus operandi of data transmission (loud and screeching sounds, analog process...).
 
-Through the investigation of protocols **through** Modems , one of my goals is then to explore the tension between digital interfaces and their hidden structure; the hidden ("distributed",  messy, noisy, multidimensional ...) protocols that enable them and transmit information.
+As a way to investigate the performative agency of Protocols **through** Modems , my primary goal is to explore the tension between digital interfaces and their hidden structure - aka the hidden ("distributed",  messy, noisy, multidimensional ...) layers of protocols that enable internet and make the information *flow*.
 
-Moreover, what really strikes me using the Internet is its *silent* characteristic. Internet appears to me as a silent - and smooth - space; defined by what Galloway states as a *continuity*.
+What really strikes me using the Internet is its *silent* characteristic...Internet appears a lot for it users as a smooth - and silent - space; defined by what Galloway states as a *continuity*.
 
-By placing intentionally a **noisy** protocol at the center of the game and creating a condition when - for the players to communicate - the protocol needs to work *well*  (perform well following its specific standards), **my goals are thus to make the protocol visible; and question these silent interfaces.**
+By placing intentionally a **noisy** protocol at the center of the game and creating a condition when - for the players to communicate - the protocol needs to perform *well*  (Following its specific standards), **my goals are  a) to make protocols visible; and b) question the way internet's data flows.**
 
 ## 2018-08-04
 
 Instead of working with Morse, I'll now work with Modem. Same logic:
 
 - The Modem is at the center of the Game/Interaction.
-- The goal of the game is basically to cooperate with the Protocol.
+- **The rules of the game is defined by the affordances of the Protocol**.
 
-What I do like with this simple idea is that:
+I'll now rename the repo MODEMGUESSINGGAME.
 
-- The interaction is both analog and digital
-- Therefore, the interaction is at the opposite or this silent *continuity* of the web. The interaction is noisy - the interaction is slow.
+## 2018-08-05
 
-**Consequently, I'll now rename the repo MODEMGUESSINGGAME**
+This research is directly linked to two very hot topics related to the politial consequences of internet: a) Net Neutrality and b) Fake News. Net Neutrality for the affordances of Internet's stack of Protocols. Fake News for misinformation spreading through Code's performativity.

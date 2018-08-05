@@ -4,7 +4,6 @@ import './App.css';
 import ReactDOM from 'react-dom';
 import Slider from 'react-rangeslider';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
-var morsify = require('morsify');
 
 
 class Receiver extends Component {
@@ -30,14 +29,8 @@ class Receiver extends Component {
  }
 
  handleSubmit(event) {
-
-   var encoded = morsify.encode(this.state.value);
-
-   console.log(encoded);
    event.preventDefault();
-   this.setState({
-     encoded
-   })
+
  }
 
   render() {
@@ -46,29 +39,6 @@ class Receiver extends Component {
 
 
     let { volume } = this.state
-
-    if(this.state.encoded){
-      var audio = morsify.audio(this.state.encoded, {
-         unit: 0.1,
-         oscillator: {
-          type: 'sine',
-          frequency: 500,
-          onended: () => {
-            console.log("clear the state here");
-            this.setState({
-              value: "",
-              encoded: ""
-            })
-          }
-        }
-      });
-      audio.play();
-      setTimeout(
-        function(){
-          return audio.stop();
-        }, 6000
-      );
-    }
 
 
 

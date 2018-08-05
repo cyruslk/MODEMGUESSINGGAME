@@ -4,11 +4,9 @@ import './App.css';
 import ReactDOM from 'react-dom';
 import Emitter from './Emitter';
 import Receiver from './Receiver';
-
-
+var shell = require('shelljs');
 import Slider from 'react-rangeslider';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
-var morsify = require('morsify');
 
 
 class App extends Component {
