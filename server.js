@@ -4,7 +4,7 @@ const http = require('http').Server(app);
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 5000;
 const { spawn } = require('child_process');
-const ls = spawn('ls', ['-lh', '/usr']);
+var child = spawn("minimodem", ["-t", "60"]);
 
 app.use(express.static(__dirname + '/build'));
 app.all('*', function(req, res, next) {
@@ -22,7 +22,9 @@ app.use(bodyParser.urlencoded({
 
 app.post('/emitter', function (req, res) {
   console.log(req.body)
-  var value = req.body.value;  
+  var value = req.body.value;
+  child.stdin.write(value);
+
 });
 
 
