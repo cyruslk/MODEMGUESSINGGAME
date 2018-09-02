@@ -4,7 +4,6 @@ import './App.css';
 import ReactDOM from 'react-dom';
 import Emitter from './Emitter';
 import Receiver from './Receiver';
-var shell = require('shelljs');
 import Slider from 'react-rangeslider';
 import {Checkbox, CheckboxGroup} from 'react-checkbox-group';
 
@@ -18,32 +17,29 @@ class App extends Component {
    }
    this.handleClickEmitter = this.handleClickEmitter.bind(this);
    this.handleClickReceiver = this.handleClickReceiver.bind(this);
-
 }
 
-handleClickEmitter() {
-  this.setState(prevState => ({
-    emitter:  true,
-    receiver: false
-  }));
-}
+  handleClickEmitter() {
+    this.setState(prevState => ({
+      emitter:  true,
+      receiver: false
+    }));
+  }
 
-handleClickReceiver() {
-  this.setState(prevState => ({
-    emitter: false,
-    receiver: true
-  }));
-}
+  handleClickReceiver() {
+    this.setState(prevState => ({
+      emitter: false,
+      receiver: true
+    }));
+  }
 
   render() {
+
     if(this.state.emitter){
       return (
         <div className="App">
         <button onClick={this.handleClickEmitter}>
           emitter
-        </button>
-        <button onClick={this.handleClickReceiver}>
-          receiver
         </button>
           <Emitter />
         </div>
@@ -51,9 +47,6 @@ handleClickReceiver() {
     }if(this.state.receiver){
       return (
         <div className="App">
-        <button onClick={this.handleClickEmitter}>
-          emitter
-        </button>
         <button onClick={this.handleClickReceiver}>
           receiver
         </button>

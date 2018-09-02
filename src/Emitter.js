@@ -30,25 +30,25 @@ class Emitter extends Component {
 
  handleSubmit(event) {
    event.preventDefault();
-
- }
+   alert(`starting to stream ${this.state.value} at ${this.state.volume}`)
+   fetch('/emitter', {
+     method: 'post',
+     body: JSON.stringify({
+     value: this.state.value,
+     volume: this.state.volume
+      }),
+      headers: {"Content-Type": "application/json"}
+    });
+    // alert(`${this.state.value} and ${this.state.volume} sent to server`)
+   };
 
   render() {
     console.log(this.state.volume);
     console.log(this.state.value);
-
-
-    let { volume } = this.state
-
-
-
-
-
-
+    let { volume } = this.state;
     return (
       <div className="Emitter">
-
-        {this.state.volume}
+        baud rate: {this.state.volume}
       <Slider
         className="slider"
         step={20}
@@ -65,7 +65,6 @@ class Emitter extends Component {
        </label>
        <input type="submit" value="Submit" />
      </form>
-     {this.state.encoded}
       </div>
     );
   }
