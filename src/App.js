@@ -38,18 +38,12 @@ class App extends Component {
     if(this.state.emitter){
       return (
         <div className="App">
-        <button onClick={this.handleClickEmitter}>
-          emitter
-        </button>
           <Emitter />
         </div>
       );
     }if(this.state.receiver){
       return (
         <div className="App">
-        <button onClick={this.handleClickReceiver}>
-          receiver
-        </button>
           <Receiver />
         </div>
       );

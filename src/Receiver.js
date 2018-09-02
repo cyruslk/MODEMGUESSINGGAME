@@ -10,7 +10,7 @@ class Receiver extends Component {
   constructor(props, context) {
    super(props, context)
    this.state = {
-     volume: 0,
+     baudRate: 0,
      value: "",
    }
 
@@ -18,61 +18,57 @@ class Receiver extends Component {
    this.handleSubmit = this.handleSubmit.bind(this);
  }
 
- handleOnChange = (value) => {
+ handleOnChange = (baudRate) => {
    this.setState({
-     volume: value
+     baudRate: baudRate
    })
+   console.log("this is the new state", this.state);
  }
-
  handleChange(event) {
    this.setState({value: event.target.value});
  }
-
  handleSubmit(event) {
    event.preventDefault();
-
  }
 
+ componentDidMount(){
+   fetch('/receiver', {
+     method: 'post',
+     body: JSON.stringify({
+       value: this.state.baudRate,
+      }),
+      headers: {"Content-Type": "application/json"}
+    });
+ }
+ 
+ componentDidUpdate(){
+   fetch('/receiver', {
+     method: 'post',
+     body: JSON.stringify({
+       baudRate: this.state.baudRate
+      }),
+      headers: {"Content-Type": "application/json"}
+    });
+ }
   render() {
-    console.log(this.state.volume);
+    console.log(this.state.baudRate);
     console.log(this.state.value);
 
 
-    let { volume } = this.state
-
-
-
-
+    let { baudRate } = this.state
     return (
       <div className="Receiver">
+          {this.state.baudRate}
+        <Slider
+          className="slider"
+          step={20}
+          tooltip={false}
+          value={baudRate}
+          orientation="vertical"
+          onChange={this.handleOnChange}
+        />
+        here
 
-      <CheckboxGroup className="checkboxes" value={['sine']}>
-        <Checkbox value="sine"/> sine
-        <Checkbox value="square"/> square
-        <Checkbox value="sawtooth"/> sawtooth
-        <Checkbox value="triangle"/> triangle
-
-      </CheckboxGroup>
-
-
-        {this.state.volume}
-      <Slider
-        className="slider"
-        step={20}
-        tooltip={false}
-        value={volume}
-        orientation="vertical"
-        onChange={this.handleOnChange}
-      />
-
-      <form onSubmit={this.handleSubmit} className="form">
-       <label>
-         Name:
-         <input type="text" value={this.state.value} onChange={this.handleChange} />
-       </label>
-       <input type="submit" value="Submit" />
-     </form>
-     {this.state.encoded}
       </div>
     );
   }
