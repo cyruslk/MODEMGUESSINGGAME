@@ -10,7 +10,7 @@ class Emitter extends Component {
   constructor(props, context) {
    super(props, context)
    this.state = {
-     volume: 0,
+     baudRate: 0,
      value: "",
    }
 
@@ -18,9 +18,9 @@ class Emitter extends Component {
    this.handleSubmit = this.handleSubmit.bind(this);
  }
 
- handleOnChange = (value) => {
+ handleOnChange = (baudRate) => {
    this.setState({
-     volume: value
+     baudRate: baudRate
    })
  }
 
@@ -30,30 +30,30 @@ class Emitter extends Component {
 
  handleSubmit(event) {
    event.preventDefault();
-   alert(`starting to stream ${this.state.value} at ${this.state.volume}`)
+   alert(`starting to stream ${this.state.value} at ${this.state.baudRate}`)
    fetch('/emitter', {
      method: 'post',
      body: JSON.stringify({
      value: this.state.value,
-     volume: this.state.volume
+     baudRate: this.state.baudRate
       }),
       headers: {"Content-Type": "application/json"}
     });
-    // alert(`${this.state.value} and ${this.state.volume} sent to server`)
+    // alert(`${this.state.value} and ${this.state.baudRate} sent to server`)
    };
 
   render() {
-    console.log(this.state.volume);
+    console.log(this.state.baudRate);
     console.log(this.state.value);
-    let { volume } = this.state;
+    let { baudRate } = this.state;
     return (
       <div className="Emitter">
-        baud rate: {this.state.volume}
+        baud rate: {this.state.baudRate}
       <Slider
         className="slider"
         step={20}
         tooltip={false}
-        value={volume}
+        value={baudRate}
         orientation="vertical"
         onChange={this.handleOnChange}
       />
